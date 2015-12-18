@@ -107,7 +107,7 @@ Cell[BoxData[{
   RowBox[{"SetDirectory", "[", 
    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], "\n", 
  RowBox[{
-  RowBox[{"Get", "[", "\"\<DiracQ_V0.m\>\"", "]"}], ";"}]}], "Input"],
+  RowBox[{"Get", "[", "\"\<DiracQV1.m\>\"", "]"}], ";"}]}], "Input"],
 
 Cell[TextData[{
  "Alternatively, the package can be placed in a folder that ",
