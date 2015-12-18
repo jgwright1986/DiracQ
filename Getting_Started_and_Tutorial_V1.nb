@@ -115,7 +115,7 @@ Cell[TextData[{
   FontSlant->"Italic"],
  " will autimatically search when you use the \[OpenCurlyDoubleQuote]Get\
 \[CloseCurlyDoubleQuote] function. Upon download the file \
-\[OpenCurlyDoubleQuote]DiracQ_V1.m\[CloseCurlyDoubleQuote] is located in a \
+\[OpenCurlyDoubleQuote]DiracQV1.m\[CloseCurlyDoubleQuote] is located in a \
 folder titled \"DiracQ\", along with a folder named \"Kernel\". To begin \
 using the package, place this \"DiracQ\" folder within the private \
 applications folder in your user base directory. To find the location of your \
