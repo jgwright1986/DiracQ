@@ -89,7 +89,7 @@ Cell[TextData[{
  " packages; we present two methods here. \nThe simplest method to get the \
 package working immediately is to save the notebook in which you are \
 currently working in the same folder as the file \
-\[OpenCurlyDoubleQuote]DiracQ_V1.m\[CloseCurlyDoubleQuote]. When this is done \
+\[OpenCurlyDoubleQuote]DiracQV1.m\[CloseCurlyDoubleQuote]. When this is done \
 the command below will load the package."
 }], "Text",
  CellChangeTimes->{{3.565914682730363*^9, 3.5659147157762537`*^9}, {
