@@ -55,7 +55,7 @@ Cell[BoxData[{
    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Get", "[", "\"\<DiracQ_V1.m\>\"", "]"}], ";"}]}], "Input",
+  RowBox[{"Get", "[", "\"\<DiracQV1.m\>\"", "]"}], ";"}]}], "Input",
  CellChangeTimes->CompressedData["
 1:eJxTTMoPSmViYGAQBWIQzcAQpsdg+MqRgaHDGEIbN/wC0z4QumFR6zETEN+j
 DUIfkzpkChK/DqY9rti+73Z/5ajy1+cDiI7hbdCR9XjlWKrYpQeiXcM8Du/0
