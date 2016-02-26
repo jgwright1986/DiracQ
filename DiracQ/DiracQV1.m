@@ -1647,7 +1647,7 @@ fermitest[X]:=False;
 
 
 CommutatorDefinition[b[i_,\[Sigma]1_],b\[Dagger][j_,\[Sigma]2_]]:=\[Delta][\[Sigma]1,\[Sigma]2] \[Delta][i,j];
-CommutatorDefinition[b\[Dagger][i_,\[Sigma]1_],b[j_,\[Sigma]2_]]:=\[Delta][\[Sigma]1,\[Sigma]2] \[Delta][i,j];
+CommutatorDefinition[b\[Dagger][i_,\[Sigma]1_],b[j_,\[Sigma]2_]]:=-\[Delta][\[Sigma]1,\[Sigma]2] \[Delta][i,j];
 CommutatorDefinition[b[i_,\[Sigma]1_],b[j_,\[Sigma]2_]]:=0;
 CommutatorDefinition[b\[Dagger][i_,\[Sigma]1_],b\[Dagger][j_,\[Sigma]2_]]:=0;
 
