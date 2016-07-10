@@ -1033,33 +1033,41 @@ OrganizeQ[A_]:=Module[{B,c,D,j,lengthA,lengthDj4,term1,term2,k,i,permutation},
 ]
 
 
-(*OrganizedProduct takes an organized expression and evaluates products between q terms, yielding a simplified organized expression*)
-OrganizedProduct[A_]:=Module[{i,j,k,B,C,D,oporg,m,lengthA,jump,finalop},
+(*OrganizedProduct takes an organized expression and evaluates products between q terms, yielding a simplified organized expression. Funtion updated to fix bug 7/16*)
+OrganizedProduct[E_]:=Module[{i,j,k,B,C,D,A,oporg,m,startover,lengthA,replaceterm,numterm,jump,finalop},
+						A=E;
+						Label[startover];
 						lengthA=Length[A];
 						Do[B[m]=A[[m]],
 							{m,lengthA}
 						];
-						For[i=1,i<=lengthA,i++,
+						For[i=1,i≤lengthA,i++,
 							If[Length[B[i][[4]]]>1,
 								j=1;
 								While[j<(Length[B[i][[4]]]),
 									If[Head[B[i][[4]][[j]]]===Head[B[i][[4]][[j+1]]],
 										If[OperatorProduct[B[i][[4]][[j]],B[i][[4]][[j+1]]]==B[i][[4]][[j]]**B[i][[4]][[j+1]],
-											j++;
-											Goto[jump]
-										];
-										oporg=Organize[OperatorProduct[B[i][[4]][[j]],B[i][[4]][[j+1]]]];
-										If[Length[oporg>1],
-											j++;
-											Goto[jump]
-										];
-										oporg=oporg[[1]];
-										finalop=Flatten[Insert[Delete[B[i][[4]],{{j},{j+1}}],oporg[[4]],j]];
-										B[i]=combine[B[i],oporg];
-										B[i]=ReplacePart[B[i],4->finalop];
-										j=j+Length[oporg[[4]]];
-										Label[jump],
-										j++
+											j++,
+											Goto[Jump],
+											Label[Jump];
+											oporg=Organize[OperatorProduct[B[i][[4]][[j]],B[i][[4]][[j+1]]]];
+											If[Length[oporg]>1,
+												numterm=Length[oporg];
+												For[k=1,k≤numterm,k++,
+													finalop=ReplacePart[B[i],4Delete[B[i][[4]],{{j},{j+1}}]];
+													replaceterm[k]=combine[finalop,oporg[[k]]];
+												];
+												A=Delete[A,i];
+												For[k=1,k≤numterm,k++,
+													A=Insert[A,replaceterm[k],i];
+												]
+												Goto[startover],
+												finalop=Flatten[Insert[Delete[B[i][[4]],{{j},{j+1}}],oporg[[1]][[4]],j]];
+												B[i]=combine[B[i],oporg[[1]]];
+												B[i]=ReplacePart[B[i],4finalop];
+												j=j+Length[oporg[[1]][[4]]]
+											]
+										]
 									]
 								]
 							]
