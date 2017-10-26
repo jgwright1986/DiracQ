@@ -2097,7 +2097,7 @@ DeleteOperator[a_]:=Module[{},
 \[Delta][x,z]:=0;
 \[Delta][z,y]:=0;
 Unprotect[Power];
-\[Delta][i_,j_,OptionsPattern[]]^2=\[Delta][i_,j_,OptionsPattern[]];
+\[Delta][i_,j_,OptionsPattern[]]^2=\[Delta][i,j,OptionsPattern[]];
 Protect[Power];
 
 
